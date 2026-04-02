@@ -27,9 +27,17 @@ export function Header() {
                 <PawPrint size={35} color="#16B5A2"/>
                 <p>PetDev</p>
             </div>
-            
 
-            <div className={styles.menu}>
+            <nav className={styles.navegacao}>
+              <a href="">Serviços</a>
+              <a href="">Sobre</a>
+              <a href="">Depoimentos</a>
+              <a href="">Contato</a>
+            </nav>
+
+            <a className={styles.btnAgendar} href="">Agendar</a>
+
+            <div className={styles.btnMenu}>
                 {open ? (
                   <X size={35} color="#0FAB46" onClick={openMenu}/>
                 ):(
