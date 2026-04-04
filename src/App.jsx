@@ -85,6 +85,44 @@ function App() {
           </div>
         </Container>
       </section>
+      <section className={styles.containerAbout}>
+        <Container>
+          <div className={styles.contentAbout}>
+
+            <div className={styles.boxContentAbout}>
+                <h2 className={styles.titleSection}>Sobre Nós</h2>
+                <p>Somos um petshop completo, dedicado a oferecer os melhores serviços e produtos para seu animal de estimação. Com mais de 10 anos de experiência, nossa equipe de profissionais qualificados trabalha com amor e dedicalção.</p>
+                <p>Acreditamos que cada pet é único e merece um atendimento personalizado. Por isso, oferecemos desde cuidados básicos até serviços especializados, sempre priorizando o bem-estar e a felicidade do seu melhor amigo.</p>
+
+                <div className={styles.boxInfosAbout}>
+                  <article>
+                    <strong className={styles.numberYear}>10+</strong>
+                    <span>Anos</span>
+                  </article>
+                  <article>
+                    <strong className={styles.numberClient}>5000+</strong>
+                    <span>Clientes</span>
+                  </article>
+                  <article>
+                    <strong className={styles.numberProfessionals}>15</strong>
+                    <span>Profissionais</span>
+                  </article>
+                </div>
+            </div>
+
+            <div className={styles.boxImgsAbout}>
+              <img src={service1} alt="Banho e Tosa" />
+              <img src={service2} alt="Veterinário" />
+              <img src={service3} alt="Creche Pet" />
+              <img src={service4} alt="Pet Shop" />
+            </div>
+
+
+          </div>
+          
+
+        </Container>
+      </section>
     </>
   );
 }
