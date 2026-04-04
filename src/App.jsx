@@ -4,8 +4,9 @@ import { Container } from "./components/container";
 import { Header } from "./components/header";
 import { CardService } from "./components/cardService";
 import { CardTestimony } from "./components/cardTestimony";
+import { CardInfo } from "./components/cardInfo";
 
-import { Sparkles, House, ShoppingBag, Stethoscope } from 'lucide-react';
+import { Sparkles, House, ShoppingBag, Stethoscope, Phone, Mail, MapPin } from 'lucide-react';
 
 import service1 from "./assets/services-1.png"
 import service2 from "./assets/services-2.png"
@@ -153,6 +154,32 @@ function App() {
               </div>
             </div>
         </Container>
+      </section>
+      <section className={styles.containerContact}>
+        <h2 className={styles.titleSection}>Entre em Contato</h2>
+        <p>Estamos prontos para cuidar do seu pet com todo carinho</p>
+
+        <Container>
+          <div className={styles.boxCardsContact}>
+              <CardInfo
+                icon={<Phone color="white" size={45}/>}
+                title="Telefone"
+                info="(11) 99191-0000"
+              />
+              <CardInfo
+                icon={<Mail color="white" size={45}/>}
+                title="Email"
+                info="contato@petdev.com.br"
+              />
+              <CardInfo
+                icon={<MapPin color="white" size={45}/>}
+                title="Endereço"
+                info="Rua dos pets, 123 - São Paulo"
+              />
+              
+          </div>
+        </Container>
+
       </section>
     </>
   );

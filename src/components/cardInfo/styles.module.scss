@@ -1,0 +1,23 @@
+
+.cardInfo{
+    width: 100%;
+    background: rgb(255, 255, 255, 0.1);
+
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    strong{
+        color: white;
+        margin: 15px 0 10px;
+        font-size: 18px;
+    }
+
+    span{
+        color: #eeeeee;
+        font-weight: 400;
+    }
+}

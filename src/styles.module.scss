@@ -190,11 +190,29 @@
     color: #555;
     margin-top: 10px;
   }
+}
 
-  .boxTestimonials{
+.boxTestimonials, .boxCardsContact{
     display: flex;
     gap: 30px;
     margin-top: 60px;
+}
+
+.containerContact{
+  padding: 60px 0;
+  background: linear-gradient(120deg, rgb(22, 181, 162, 0.8), rgb(15, 171, 70, 0.8));
+
+  h2{
+    color: white;
+  }
+
+  p{
+    color: #eeeeee;
+    margin-top: 10px;
+  }
+
+  h2, p{
+    text-align: center;
   }
 }
 
@@ -274,7 +292,7 @@
       font-size: 35px;
     }
 
-  .boxTestimonials{
+  .boxTestimonials, .boxCardsContact{
     flex-direction: column;
   }
 }
