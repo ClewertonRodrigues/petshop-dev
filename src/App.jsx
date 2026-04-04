@@ -2,14 +2,48 @@ import styles from "./styles.module.scss";
 
 import { Container } from "./components/container";
 import { Header } from "./components/header";
+import { CardService } from "./components/cardService";
 
-import imgInicio from "./assets/services-4.png";
+import { Sparkles, House, ShoppingBag, Stethoscope } from 'lucide-react';
+
+import service1 from "./assets/services-1.png"
+import service2 from "./assets/services-2.png"
+import service3 from "./assets/services-3.png"
+import service4 from "./assets/services-4.png"
 
 function App() {
+
+  const services = [
+    {
+      urlImg: service1,
+      icon: Sparkles,
+      title: "Banho e Tosa",
+      description: "Tratamento completo de higiene e beleza para seu pet, com produtos de qualidade premium."
+    },
+    {
+      urlImg: service2,
+      icon: Stethoscope,
+      title: "Veterinário",
+      description: "Consultas, vacinas e exames com profissionais experientes e atenciosos."
+    },
+    {
+      urlImg: service3,
+      icon: House,
+      title: "Creche Pet",
+      description: "Espaço seguro e divertido para seu pet brincar e socializar enquanto você trabalha."
+    },
+    {
+      urlImg: service4,
+      icon: ShoppingBag,
+      title: "Pet Shop",
+      description: "Rações, brinquedos, acessórios e tudo que seu pet precisa em um só lugar."
+    },
+  ]
+
   return (
     <>
       <Header />
-      <section className={styles.container}>
+      <section className={styles.containerHero}>
         <Container>
           <div className={styles.containerContent}>
             <div className={styles.content}>
@@ -28,7 +62,26 @@ function App() {
               </div>
             </div>
 
-            <img className={styles.img} src={imgInicio} alt="" />
+            <img className={styles.img} src={service4} alt="" />
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.containerServices}>
+        <h2 className={styles.titleSection}>Nossos Serviços</h2>
+        <p>Tudo que seu pet precisa em um só lugar, com profissionais qualificados e muito carinho</p>
+
+        <Container>
+          <div className={styles.contentServices}>
+            {services.map((service, index) => (
+              <CardService
+                key={index}
+                imgUrl={service.urlImg}
+                icon={<service.icon size={35} color="white"/>}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
           </div>
         </Container>
       </section>
