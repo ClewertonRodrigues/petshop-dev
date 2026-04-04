@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { Container } from "./components/container";
 import { Header } from "./components/header";
 import { CardService } from "./components/cardService";
+import { CardTestimony } from "./components/cardTestimony";
 
 import { Sparkles, House, ShoppingBag, Stethoscope } from 'lucide-react';
 
@@ -37,6 +38,21 @@ function App() {
       icon: ShoppingBag,
       title: "Pet Shop",
       description: "Rações, brinquedos, acessórios e tudo que seu pet precisa em um só lugar."
+    },
+  ]
+
+  const testimonials = [
+    {
+      testmony: "Meu cachorro adora ir ao petshop! O atendimento é excepcional e os profissionais são muitos carinhosos.",
+      name: "Maria Silva"
+    },
+    {
+      testmony: "Melhor petshop da região! Preços justos e serviços de qualidade. Super recomendo!",
+      name: "João Santos"
+    },
+    {
+      testmony: "A creche é maravilhosa! Fico tranquila sabendo que meu pet está em boas mãos.",
+      name: "Ana Costa"
     },
   ]
 
@@ -116,11 +132,26 @@ function App() {
               <img src={service3} alt="Creche Pet" />
               <img src={service4} alt="Pet Shop" />
             </div>
-
-
           </div>
-          
+        </Container>
+      </section>
 
+      <section className={styles.containerTestimonials}>
+        <Container>
+            <div>
+              <h2 className={styles.titleSection}>O que dizem nossos clientes</h2>
+              <p>A satisfação de quem confia em nós é a nossa maior recompensa</p>
+
+              <div className={styles.boxTestimonials}>
+                {testimonials.map((item, index) => (
+                  <CardTestimony
+                    key={index}
+                    testimony={item.testmony}
+                    name={item.name}
+                  />
+                ))}
+              </div>
+            </div>
         </Container>
       </section>
     </>

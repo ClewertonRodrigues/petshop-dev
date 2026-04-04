@@ -94,7 +94,7 @@
 }
 
 .titleSection {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .contentServices {
@@ -178,6 +178,26 @@
   }
 }
 
+.containerTestimonials{
+  background-color: rgba(253, 253, 253, 0.3);
+  padding: 60px 0;
+
+  .titleSection, p{
+    text-align: center;
+  }
+
+  p{
+    color: #555;
+    margin-top: 10px;
+  }
+
+  .boxTestimonials{
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+  }
+}
+
 @media (max-width: 1080px) {
   .containerContent {
     flex-direction: column;
@@ -245,12 +265,16 @@
   }
 
   .containerServices {
-    .titleSection {
-      font-size: 35px;
-    }
-
     p {
       font-size: 17px;
     }
+  }
+
+  .titleSection {
+      font-size: 35px;
+    }
+
+  .boxTestimonials{
+    flex-direction: column;
   }
 }
