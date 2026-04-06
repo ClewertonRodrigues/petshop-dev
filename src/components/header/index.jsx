@@ -18,7 +18,7 @@ export function Header() {
   }
 
   return (
-    <div className={styles.container}>
+    <>
       <header>
         <Container>
           <div className={styles.headerContent}>
@@ -67,6 +67,6 @@ export function Header() {
           </ol>
       </div>
       
-    </div>
+    </>
   );
 }
