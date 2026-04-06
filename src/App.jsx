@@ -6,7 +6,7 @@ import { CardService } from "./components/cardService";
 import { CardTestimony } from "./components/cardTestimony";
 import { CardInfo } from "./components/cardInfo";
 
-import { Sparkles, House, ShoppingBag, Stethoscope, Phone, Mail, MapPin } from 'lucide-react';
+import { Sparkles, House, ShoppingBag, Stethoscope, Phone, Mail, MapPin, PawPrint } from 'lucide-react';
 
 import service1 from "./assets/services-1.png"
 import service2 from "./assets/services-2.png"
@@ -181,6 +181,53 @@ function App() {
         </Container>
 
       </section>
+      <footer>
+        <Container>
+          <div className={styles.boxContentFooter}>
+            <div className={styles.boxLogoFooter}>
+                <div>
+                  <PawPrint color="white" size={30}/>
+                  <span>
+                    PetDev
+                  </span>
+                </div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2014.</p>
+            </div>
+
+            <div className={styles.boxInfosFooter}>
+              <p>Serviços:</p>
+              <ul>
+                <li>Banho e Tosa</li>
+                <li>Veterinário</li>
+                <li>Creche Pet</li>
+                <li>Pet Shop</li>
+              </ul>
+            </div>
+            <div className={styles.boxInfosFooter}>
+              <p>Horários:</p>
+              <ul>
+                <li>Segunda a Sexta: 8h - 19h</li>
+                <li>Sábado: 8h - 14h</li>
+                <li>Domingo: Fechado</li>
+              </ul>
+            </div>
+            <div className={styles.boxSocial}>
+              <p>Redes Sociais</p>
+              <ul>
+                <li>f</li>
+                <li>in</li>
+                <li>ig</li>
+              </ul>
+            </div> 
+          </div>
+
+          <div className={styles.lineFooter}>
+          </div>
+
+          <p className={styles.copy}>&copy; {new Date().getFullYear()} PetDev. Todos os direitos reservados</p>
+            
+        </Container>
+      </footer>
     </>
   );
 }
