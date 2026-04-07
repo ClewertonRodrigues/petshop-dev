@@ -9,12 +9,8 @@ export function Header() {
 
   const [open, setOpen] = useState(false)
 
-  function openMenu(){
-    if(open){
-      setOpen(false)
-    }else{
-      setOpen(true)
-    }
+  function toggleMenu(){
+    setOpen(prev => !prev)
   }
 
   return (
@@ -39,9 +35,9 @@ export function Header() {
 
             <div className={styles.btnMenu}>
                 {open ? (
-                  <X size={40} color="#0FAB46" onClick={openMenu}/>
+                  <X size={40} color="#0FAB46" onClick={toggleMenu}/>
                 ):(
-                  <Menu size={40} color="#0FAB46" onClick={openMenu}/>
+                  <Menu size={40} color="#0FAB46" onClick={toggleMenu}/>
                 )}
             </div>
 
