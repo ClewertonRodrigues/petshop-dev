@@ -13,6 +13,8 @@ import service2 from "./assets/services-2.png"
 import service3 from "./assets/services-3.png"
 import service4 from "./assets/services-4.png"
 
+import { motion } from "framer-motion";
+
 function App() {
 
   const services = [
@@ -63,7 +65,12 @@ function App() {
       <section className={styles.containerHero}>
         <Container>
           <div className={styles.containerContent}>
-            <div className={styles.content}>
+            <motion.div 
+              className={styles.content}
+              initial={{ opacity: 0, x: -150 }}
+              animate={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            >
               <h1>
                 Cuidado e <span>Amor</span> para seu Pet
               </h1>
@@ -77,9 +84,16 @@ function App() {
                 <a className={styles.btnAction}>Conhecer Serviços</a>
                 <a className={styles.btnContact}>Fale Conosco</a>
               </div>
-            </div>
+            </motion.div>
 
-            <img className={styles.img} src={service4} alt="" />
+            <motion.img 
+              className={styles.img} 
+              src={service4} 
+              alt="" 
+              initial={{ opacity: 0, x: 150 }}
+              animate={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            />
           </div>
         </Container>
       </section>
@@ -89,7 +103,13 @@ function App() {
         <p>Tudo que seu pet precisa em um só lugar, com profissionais qualificados e muito carinho</p>
 
         <Container>
-          <div className={styles.contentServices}>
+          <motion.div 
+            className={styles.contentServices}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {services.map((service, index) => (
               <CardService
                 key={index}
@@ -99,14 +119,20 @@ function App() {
                 description={service.description}
               />
             ))}
-          </div>
+          </motion.div>
         </Container>
       </section>
       <section className={styles.containerAbout}>
         <Container>
           <div className={styles.contentAbout}>
 
-            <div className={styles.boxContentAbout}>
+            <motion.div 
+              className={styles.boxContentAbout}
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
                 <h2 className={styles.titleSection}>Sobre Nós</h2>
                 <p>Somos um petshop completo, dedicado a oferecer os melhores serviços e produtos para seu animal de estimação. Com mais de 10 anos de experiência, nossa equipe de profissionais qualificados trabalha com amor e dedicalção.</p>
                 <p>Acreditamos que cada pet é único e merece um atendimento personalizado. Por isso, oferecemos desde cuidados básicos até serviços especializados, sempre priorizando o bem-estar e a felicidade do seu melhor amigo.</p>
@@ -125,14 +151,20 @@ function App() {
                     <span>Profissionais</span>
                   </article>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.boxImgsAbout}>
+            <motion.div 
+              className={styles.boxImgsAbout}
+              initial={{ opacity: 0, x: 150 }}
+              whileInView={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <img src={service1} alt="Banho e Tosa" />
               <img src={service2} alt="Veterinário" />
               <img src={service3} alt="Creche Pet" />
               <img src={service4} alt="Pet Shop" />
-            </div>
+            </motion.div>
           </div>
         </Container>
       </section>
@@ -143,7 +175,13 @@ function App() {
               <h2 className={styles.titleSection}>O que dizem nossos clientes</h2>
               <p>A satisfação de quem confia em nós é a nossa maior recompensa</p>
 
-              <div className={styles.boxTestimonials}>
+              <motion.div 
+                className={styles.boxTestimonials}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 {testimonials.map((item, index) => (
                   <CardTestimony
                     key={index}
@@ -151,7 +189,7 @@ function App() {
                     name={item.name}
                   />
                 ))}
-              </div>
+              </motion.div>
             </div>
         </Container>
       </section>
@@ -160,7 +198,13 @@ function App() {
         <p>Estamos prontos para cuidar do seu pet com todo carinho</p>
 
         <Container>
-          <div className={styles.boxCardsContact}>
+          <motion.div 
+            className={styles.boxCardsContact}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
               <CardInfo
                 icon={<Phone color="white" size={45}/>}
                 title="Telefone"
@@ -177,7 +221,7 @@ function App() {
                 info="Rua dos pets, 123 - São Paulo"
               />
               
-          </div>
+          </motion.div>
         </Container>
 
       </section>
