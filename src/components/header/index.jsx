@@ -39,9 +39,9 @@ export function Header() {
 
             <div className={styles.btnMenu}>
                 {open ? (
-                  <X size={35} color="#0FAB46" onClick={openMenu}/>
+                  <X size={40} color="#0FAB46" onClick={openMenu}/>
                 ):(
-                  <Menu size={35} color="#0FAB46" onClick={openMenu}/>
+                  <Menu size={40} color="#0FAB46" onClick={openMenu}/>
                 )}
             </div>
 
