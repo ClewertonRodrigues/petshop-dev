@@ -130,6 +130,20 @@ header {
   }
 }
 
+.overlay{
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  
+  z-index: 150;
+}
+
 @media (min-width: 768px) {
   .btnMenu {
     display: none;

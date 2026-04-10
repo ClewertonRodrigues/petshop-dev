@@ -1,13 +1,27 @@
 import styles from "./styles.module.scss"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Container } from "./../container";
 import { PawPrint, Menu, X } from "lucide-react";
 
+import { AnimatePresence ,motion } from "framer-motion";
+
 export function Header() {
 
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if(open){
+      document.body.classList.add("menu-open")
+    }else{
+      document.body.classList.remove("menu-open")
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open")
+    }
+  }, [open])
 
   function toggleMenu(){
     setOpen(prev => !prev)
@@ -45,6 +59,22 @@ export function Header() {
         </Container>
       </header>
 
+
+      <AnimatePresence>
+          {open && (
+            <motion.div 
+              className={styles.overlay}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setOpen(false)}
+            >
+            </ motion.div>
+          )}
+      </AnimatePresence>
+      
+
       
         <div className={`${styles.menuMobile} ${open ? styles.open : ""}`}>
 
@@ -55,10 +85,10 @@ export function Header() {
 
             
           <ul>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#services" onClick={() => setOpen(false)}>Serviços</a></li>
+            <li><a href="#about" onClick={() => setOpen(false)}>Sobre</a></li>
+            <li><a href="#testimonials" onClick={() => setOpen(false)}>Depoimentos</a></li>
+            <li><a href="#contact" onClick={() => setOpen(false)}>Contato</a></li>
             <li className={styles.btnAgendarMobile}>Agendar</li>
           </ul>
       </div>
