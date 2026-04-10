@@ -62,7 +62,7 @@ function App() {
   return (
     <>
       <Header />
-      <section className={styles.containerHero}>
+      <section id="hero" className={styles.containerHero}>
         <Container>
           <div className={styles.containerContent}>
             <motion.div 
@@ -98,7 +98,7 @@ function App() {
         </Container>
       </section>
 
-      <section className={styles.containerServices}>
+      <section id="services" className={styles.containerServices}>
         <h2 className={styles.titleSection}>Nossos Serviços</h2>
         <p>Tudo que seu pet precisa em um só lugar, com profissionais qualificados e muito carinho</p>
 
@@ -122,7 +122,7 @@ function App() {
           </motion.div>
         </Container>
       </section>
-      <section className={styles.containerAbout}>
+      <section id="about" className={styles.containerAbout}>
         <Container>
           <div className={styles.contentAbout}>
 
@@ -169,7 +169,7 @@ function App() {
         </Container>
       </section>
 
-      <section className={styles.containerTestimonials}>
+      <section id="testimonials" className={styles.containerTestimonials}>
         <Container>
             <div>
               <h2 className={styles.titleSection}>O que dizem nossos clientes</h2>
@@ -193,7 +193,7 @@ function App() {
             </div>
         </Container>
       </section>
-      <section className={styles.containerContact}>
+      <section id="contact" className={styles.containerContact}>
         <h2 className={styles.titleSection}>Entre em Contato</h2>
         <p>Estamos prontos para cuidar do seu pet com todo carinho</p>
 

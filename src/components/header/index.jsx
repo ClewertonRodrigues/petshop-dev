@@ -19,16 +19,16 @@ export function Header() {
         <Container>
           <div className={styles.headerContent}>
 
-            <div className={styles.logo}>
+            <a href="#hero" className={styles.logo}>
                 <PawPrint size={35} color="#16B5A2"/>
                 <p>PetDev</p>
-            </div>
+            </a>
 
             <nav className={styles.navegacao}>
-              <a href="">Serviços</a>
-              <a href="">Sobre</a>
-              <a href="">Depoimentos</a>
-              <a href="">Contato</a>
+              <a href="#services">Serviços</a>
+              <a href="#about">Sobre</a>
+              <a href="#testimonials">Depoimentos</a>
+              <a href="#contact">Contato</a>
             </nav>
 
             <a className={styles.btnAgendar} href="">Agendar</a>
@@ -55,10 +55,10 @@ export function Header() {
 
             
           <ol>
-            <li><a>Serviços</a></li>
-            <li><a>Sobre</a></li>
-            <li><a>Depoimentos</a></li>
-            <li><a>Contato</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
             <li>Agendar</li>
           </ol>
       </div>

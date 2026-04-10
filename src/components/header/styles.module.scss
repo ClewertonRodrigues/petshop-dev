@@ -17,6 +17,8 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
 
   p {
     font-size: 25px;
@@ -58,6 +60,11 @@ header {
       border-radius: 10px;
       font-weight: 400;
       transition: background 0.4s ease;
+
+      a{
+        text-decoration: none;
+        color: black;
+      }
 
       &:hover {
         background-color: rgb(22, 181, 162, 0.15);
