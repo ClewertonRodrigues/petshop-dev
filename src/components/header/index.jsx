@@ -54,13 +54,13 @@ export function Header() {
             </div>
 
             
-          <ol>
+          <ul>
             <li><a href="#services">Serviços</a></li>
             <li><a href="#about">Sobre</a></li>
             <li><a href="#testimonials">Depoimentos</a></li>
             <li><a href="#contact">Contato</a></li>
-            <li>Agendar</li>
-          </ol>
+            <li className={styles.btnAgendarMobile}>Agendar</li>
+          </ul>
       </div>
       
     </>
