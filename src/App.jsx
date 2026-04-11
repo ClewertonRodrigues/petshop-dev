@@ -100,7 +100,7 @@ function App() {
 
       <section id="services" className={styles.containerServices}>
         <h2 className={styles.titleSection}>Nossos Serviços</h2>
-        <p>Tudo que seu pet precisa em um só lugar, com profissionais qualificados e muito carinho</p>
+        <p className={styles.subTitleSection}>Tudo que seu pet precisa em um só lugar, com profissionais qualificados e muito carinho</p>
 
         <Container>
           <motion.div 
@@ -173,7 +173,7 @@ function App() {
         <Container>
             <div>
               <h2 className={styles.titleSection}>O que dizem nossos clientes</h2>
-              <p>A satisfação de quem confia em nós é a nossa maior recompensa</p>
+              <p className={styles.subTitleSection}>A satisfação de quem confia em nós é a nossa maior recompensa</p>
 
               <motion.div 
                 className={styles.boxTestimonials}

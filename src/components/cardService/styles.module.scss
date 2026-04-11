@@ -52,10 +52,25 @@
         p{
             text-align: start;
             font-size: 15px;
-            margin-bottom: 10px;
+            margin: 15px 0;
             line-height: 1.6;
+            color: #555;
         }
 
     }
 }
 
+@media (max-width: 768px){
+    .containerCard{
+        .boxContent{
+            strong{
+                font-size: 28px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
