@@ -138,8 +138,8 @@ header {
   bottom: 0;
 
   background-color: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   
   z-index: 150;
 }
