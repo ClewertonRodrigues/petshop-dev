@@ -403,6 +403,28 @@ footer{
     margin-top: 12px;
   }
 
+
+  .contentAbout{
+    .boxContentAbout{
+      p{
+        font-size: 24px;
+      }
+
+      .boxInfosAbout{
+        article{
+          strong{
+            font-size: 32px;
+          }
+
+          span{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  
+
   .boxTestimonials, .boxCardsContact{
     flex-direction: column;
   }
