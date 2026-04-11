@@ -31,3 +31,16 @@
         font-weight: 500;
     }
 }
+
+@media (max-width: 1080px){
+    .card{
+        i{
+            font-size: 20px;
+        }
+
+        span{
+            font-size: 22px;
+        }
+    }
+
+}
