@@ -230,7 +230,7 @@ function App() {
           <div className={styles.boxContentFooter}>
             <div className={styles.boxLogoFooter}>
                 <div>
-                  <PawPrint color="white" size={30}/>
+                  <PawPrint color="white" size={35}/>
                   <span>
                     PetDev
                   </span>
@@ -241,10 +241,10 @@ function App() {
             <div className={styles.boxInfosFooter}>
               <p>Serviços:</p>
               <ul>
-                <li>Banho e Tosa</li>
-                <li>Veterinário</li>
-                <li>Creche Pet</li>
-                <li>Pet Shop</li>
+                <li><a href="#services">Banho e Tosa</a></li>
+                <li><a href="#services">Veterinário</a></li>
+                <li><a href="#services">Creche Pet</a></li>
+                <li><a href="#services">Pet Shop</a></li>
               </ul>
             </div>
             <div className={styles.boxInfosFooter}>
@@ -258,9 +258,9 @@ function App() {
             <div className={styles.boxSocial}>
               <p>Redes Sociais</p>
               <ul>
-                <li>f</li>
-                <li>in</li>
-                <li>ig</li>
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">f</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">in</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">ig</a></li>
               </ul>
             </div> 
           </div>
