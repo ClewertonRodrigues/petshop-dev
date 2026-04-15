@@ -34,7 +34,7 @@ export function Header() {
           <div className={styles.headerContent}>
 
             <a href="#hero" className={styles.logo}>
-                <PawPrint size={35} color="#16B5A2"/>
+                <PawPrint size={30} color="#16B5A2"/>
                 <p>PetDev</p>
             </a>
 
@@ -49,9 +49,9 @@ export function Header() {
 
             <div className={styles.btnMenu}>
                 {open ? (
-                  <X size={40} color="#0FAB46" onClick={toggleMenu}/>
+                  <X size={35} color="#0FAB46" onClick={toggleMenu}/>
                 ):(
-                  <Menu size={40} color="#0FAB46" onClick={toggleMenu}/>
+                  <Menu size={35} color="#0FAB46" onClick={toggleMenu}/>
                 )}
             </div>
 
