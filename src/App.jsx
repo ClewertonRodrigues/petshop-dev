@@ -81,8 +81,15 @@ function App() {
               </p>
 
               <div className={styles.boxButtons}>
-                <a className={styles.btnAction}>Conhecer Serviços</a>
-                <a className={styles.btnContact}>Fale Conosco</a>
+                <a href="#services" className={styles.btnAction}>Conhecer Serviços</a>
+                <a 
+                  href="https://wa.me/5599999999999?text=Olá,%20vim%20pelo%20site!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.btnContact}
+                >
+                  Fale Conosco
+                </a>
               </div>
             </motion.div>
 

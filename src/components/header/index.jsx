@@ -45,7 +45,14 @@ export function Header() {
               <a href="#contact">Contato</a>
             </nav>
 
-            <a className={styles.btnAgendar} href="">Agendar</a>
+            <a 
+              href="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20para%20meu%20pet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.btnAgendar}
+            >
+              Agendar
+            </a>
 
             <div className={styles.btnMenu}>
                 {open ? (
@@ -89,7 +96,16 @@ export function Header() {
             <li><a href="#about" onClick={() => setOpen(false)}>Sobre</a></li>
             <li><a href="#testimonials" onClick={() => setOpen(false)}>Depoimentos</a></li>
             <li><a href="#contact" onClick={() => setOpen(false)}>Contato</a></li>
-            <li className={styles.btnAgendarMobile}>Agendar</li>
+            <li>
+              <a 
+                href="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20para%20meu%20pet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnAgendarMobile}
+              >
+                Agendar
+              </a>
+            </li>
           </ul>
       </div>
       
