@@ -47,23 +47,29 @@ section{
     align-items: center;
 
     a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       border-radius: 999px;
       padding: 18px 32px;
       cursor: pointer;
       text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover{
+        transform: scale(1.05);
+      }
     }
 
     .btnAction {
       color: white;
       background: linear-gradient(90deg, #16b5a2, #0fab46);
       font-weight: bold;
-      transition: all 0.3s ease;
       border: 2px solid transparent;
-      box-shadow: 10px 10px 20px rgba(41, 145, 41, 0.4);
+      box-shadow: 10px 10px 20px rgba(41, 145, 41, 0.2);
 
       &:hover {
-        transform: scale(1.05);
-        box-shadow: 10px 10px 20px rgba(41, 145, 41, 0.6);
+        box-shadow: 10px 10px 20px rgba(41, 145, 41, 0.3);
       }
     }
 

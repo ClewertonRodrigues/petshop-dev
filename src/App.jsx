@@ -6,7 +6,7 @@ import { CardService } from "./components/cardService";
 import { CardTestimony } from "./components/cardTestimony";
 import { CardInfo } from "./components/cardInfo";
 
-import { Sparkles, House, ShoppingBag, Stethoscope, Phone, Mail, MapPin, PawPrint } from 'lucide-react';
+import { Sparkles, House, ShoppingBag, Stethoscope, Phone, Mail, MapPin, PawPrint, MessageCircleCheck, ArrowRight } from 'lucide-react';
 
 import service1 from "./assets/services-1.png"
 import service2 from "./assets/services-2.png"
@@ -81,7 +81,10 @@ function App() {
               </p>
 
               <div className={styles.boxButtons}>
-                <a href="#services" className={styles.btnAction}>Conhecer Serviços</a>
+                <a href="#services" className={styles.btnAction}>
+                  Conhecer Serviços
+                  <ArrowRight/>
+                </a>
                 <a 
                   href="https://wa.me/5599999999999?text=Olá,%20vim%20pelo%20site!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
                   target="_blank"
@@ -89,6 +92,7 @@ function App() {
                   className={styles.btnContact}
                 >
                   Fale Conosco
+                  <MessageCircleCheck size={20} color="#011627"/>
                 </a>
               </div>
             </motion.div>
