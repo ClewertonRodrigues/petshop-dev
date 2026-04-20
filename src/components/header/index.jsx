@@ -3,13 +3,16 @@ import styles from "./styles.module.scss"
 import { useState, useEffect } from "react";
 
 import { Container } from "./../container";
+import { useActiveSection } from "../activeSection";
+
 import { PawPrint, Menu, X } from "lucide-react";
 
 import { AnimatePresence ,motion } from "framer-motion";
 
 export function Header() {
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     if(open){
@@ -39,10 +42,10 @@ export function Header() {
             </a>
 
             <nav className={styles.navegacao}>
-              <a href="#services">Serviços</a>
-              <a href="#about">Sobre</a>
-              <a href="#testimonials">Depoimentos</a>
-              <a href="#contact">Contato</a>
+              <a className={activeSection === "services" ? styles.activeLink : "" } href="#services">Serviços</a>
+              <a className={activeSection === "about" ? styles.activeLink : "" } href="#about">Sobre</a>
+              <a className={activeSection === "testimonials" ? styles.activeLink : "" } href="#testimonials">Depoimentos</a>
+              <a className={activeSection === "contact" ? styles.activeLink : "" }href="#contact">Contato</a>
             </nav>
 
             <a 
@@ -92,10 +95,42 @@ export function Header() {
 
             
           <ul>
-            <li><a href="#services" onClick={() => setOpen(false)}>Serviços</a></li>
-            <li><a href="#about" onClick={() => setOpen(false)}>Sobre</a></li>
-            <li><a href="#testimonials" onClick={() => setOpen(false)}>Depoimentos</a></li>
-            <li><a href="#contact" onClick={() => setOpen(false)}>Contato</a></li>
+            <li>
+              <a 
+                href="#services" 
+                onClick={() => setOpen(false)}
+                className={activeSection === "services" ? styles.activeLink : "" }
+              >
+                Serviços
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#about" 
+                onClick={() => setOpen(false)}
+                className={activeSection === "about" ? styles.activeLink : "" }
+              >
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#testimonials"
+                onClick={() => setOpen(false)}
+                className={activeSection === "testimonials" ? styles.activeLink : "" }
+              >
+                Depoimentos
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className={activeSection === "contact" ? styles.activeLink : "" }
+              >
+                Contato
+              </a>
+            </li>
             <li>
               <a 
                 href="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20para%20meu%20pet"
