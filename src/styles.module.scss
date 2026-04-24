@@ -135,6 +135,10 @@ section{
   .boxContentAbout{
     max-width: 600px;
 
+    .titleSection{
+      text-align: start;
+    }
+
     p{
       color: #555;
       font-size: 18px;
@@ -371,7 +375,7 @@ footer{
     .boxContentAbout{
       max-width: 100%;
 
-      h2, p{
+      .titleSection, p{
         text-align: center;
       }
     }
