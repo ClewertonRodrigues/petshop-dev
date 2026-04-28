@@ -8,10 +8,11 @@ import { CardInfo } from "./components/cardInfo";
 
 import { Sparkles, House, ShoppingBag, Stethoscope, Phone, Mail, MapPin, PawPrint, MessageCircleCheck, ArrowRight } from 'lucide-react';
 
-import service1 from "./assets/services-1.png"
-import service2 from "./assets/services-2.png"
-import service3 from "./assets/services-3.png"
-import service4 from "./assets/services-4.png"
+import imgHero from "./assets/images/hero/img-hero.png"
+import service1 from "./assets/images/services/service-1.png"
+import service2 from "./assets/images/services/service-2.png"
+import service3 from "./assets/images/services/service-3.png"
+import service4 from "./assets/images/services/service-4.png"
 
 import { motion } from "framer-motion";
 
@@ -99,7 +100,7 @@ function App() {
 
             <motion.img 
               className={styles.img} 
-              src={service4} 
+              src={imgHero} 
               alt="" 
               initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0}}
