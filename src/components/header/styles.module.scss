@@ -11,23 +11,65 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  cursor: pointer;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
 
-  p {
-    font-size: 25px;
-    font-weight: 600;
-    background: linear-gradient(90deg, #16b5a2, #0fab46);
-    background-clip: text;
-    color: transparent;
+    p {
+      font-size: 25px;
+      font-weight: 600;
+      background: linear-gradient(90deg, #16b5a2, #0fab46);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .navegacao {
+    display: none;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0, 0.7);
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.4s ease;
+
+      &:hover {
+        color: rgb(0, 0, 0, 1);
+      }
+
+      &.activeLink{
+        color: #0fab46;
+      }
+    }
+  }
+
+  .btnAgendar {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(180deg, #e0731f, #d91e1e);
+    padding: 10px 30px;
+    border-radius: 20px;
+    display: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: linear-gradient(
+        180deg,
+        rgb(224, 115, 31, 0.9),
+        rgb(217, 30, 30, 0.9)
+      );
+    }
   }
 }
+
+
 
 .menuMobile {
   background-color: white;
@@ -98,45 +140,6 @@ header {
   }
 }
 
-.navegacao {
-  display: none;
-  gap: 30px;
-
-  a {
-    text-decoration: none;
-    color: rgb(0, 0, 0, 0.7);
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.4s ease;
-
-    &:hover {
-      color: rgb(0, 0, 0, 1);
-    }
-
-    &.activeLink{
-      color: #0fab46;
-    }
-  }
-}
-
-.btnAgendar {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  background: linear-gradient(180deg, #e0731f, #d91e1e);
-  padding: 10px 30px;
-  border-radius: 20px;
-  display: none;
-  transition: all 0.4s ease;
-
-  &:hover {
-    background: linear-gradient(
-      180deg,
-      rgb(224, 115, 31, 0.9),
-      rgb(217, 30, 30, 0.9)
-    );
-  }
-}
 
 .overlay{
   position: fixed;
@@ -157,11 +160,13 @@ header {
     display: none;
   }
 
-  .navegacao {
-    display: flex;
-  }
+  .headerContent{
+    .navegacao {
+      display: flex;
+    }
 
-  .btnAgendar {
-    display: block;
+    .btnAgendar {
+      display: block;
+    }
   }
 }
