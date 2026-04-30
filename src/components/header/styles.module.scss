@@ -29,7 +29,7 @@ header {
   }
 
   .navegacao {
-    display: none;
+    display: flex;
     gap: 30px;
 
     a {
@@ -56,7 +56,7 @@ header {
     background: linear-gradient(180deg, #e0731f, #d91e1e);
     padding: 10px 30px;
     border-radius: 20px;
-    display: none;
+    display: block;
     transition: all 0.4s ease;
 
     &:hover {
@@ -66,6 +66,10 @@ header {
         rgb(217, 30, 30, 0.9)
       );
     }
+  }
+
+  .btnMenu{
+    display: none;
   }
 }
 
@@ -78,6 +82,7 @@ header {
   left: 0;
   z-index: 200;
   padding: 20px;
+  display: none;
 
   transform: translateX(-100%);
   transition: transform 0.5s ease;
@@ -146,6 +151,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
+  display: none;
 
   background-color: rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(4px);
@@ -154,18 +160,22 @@ header {
   z-index: 150;
 }
 
-@media (min-width: 768px) {
-  .btnMenu {
-    display: none;
-  }
-
+@media (max-width: 768px) {
   .headerContent {
     .navegacao {
-      display: flex;
+      display: none;
     }
 
     .btnAgendar {
+      display: none;
+    }
+
+    .btnMenu{
       display: block;
     }
+  }
+
+  .menuMobile, .overlay{
+    display: block;
   }
 }
