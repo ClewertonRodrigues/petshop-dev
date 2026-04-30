@@ -6,27 +6,27 @@ header {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+
+  p {
+    font-size: 25px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #16b5a2, #0fab46);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 .headerContent {
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    cursor: pointer;
-
-    p {
-      font-size: 25px;
-      font-weight: 600;
-      background: linear-gradient(90deg, #16b5a2, #0fab46);
-      background-clip: text;
-      color: transparent;
-    }
-  }
 
   .navegacao {
     display: flex;
@@ -68,7 +68,7 @@ header {
     }
   }
 
-  .btnMenu{
+  .btnMenu {
     display: none;
   }
 }
@@ -170,12 +170,13 @@ header {
       display: none;
     }
 
-    .btnMenu{
+    .btnMenu {
       display: block;
     }
   }
 
-  .menuMobile, .overlay{
+  .menuMobile,
+  .overlay {
     display: block;
   }
 }
