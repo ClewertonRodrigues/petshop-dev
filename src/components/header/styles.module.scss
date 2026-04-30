@@ -43,7 +43,7 @@ header {
         color: rgb(0, 0, 0, 1);
       }
 
-      &.activeLink{
+      &.activeLink {
         color: #0fab46;
       }
     }
@@ -69,8 +69,6 @@ header {
   }
 }
 
-
-
 .menuMobile {
   background-color: white;
   height: 100%;
@@ -94,18 +92,20 @@ header {
     gap: 10px;
     margin-top: 20px;
 
-    li{
+    li {
       list-style: none;
       font-size: 24px;
 
-      a{
+      a {
         text-decoration: none;
         color: #000;
         padding: 15px 10px;
         border-radius: 5px;
-        transition: background 0.3s ease, transform 0.2s ease;
+        transition:
+          background 0.3s ease,
+          transform 0.2s ease;
         display: block;
-        
+
         &:hover {
           background-color: rgb(22, 181, 162, 0.15);
         }
@@ -115,20 +115,20 @@ header {
           transform: scale(0.98);
         }
 
-        &.activeLink{
+        &.activeLink {
           background-color: rgb(22, 181, 162, 0.15);
         }
       }
     }
-    
-    .btnAgendarMobile{
+
+    .btnAgendarMobile {
       background: linear-gradient(180deg, #e0731f, #d91e1e);
       padding: 15px 10px;
       border-radius: 5px;
       color: white;
       font-weight: bold;
 
-      &:hover{
+      &:hover {
         filter: brightness(1.1);
       }
 
@@ -140,8 +140,7 @@ header {
   }
 }
 
-
-.overlay{
+.overlay {
   position: fixed;
   top: 80px;
   left: 0;
@@ -151,7 +150,7 @@ header {
   background-color: rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  
+
   z-index: 150;
 }
 
@@ -160,7 +159,7 @@ header {
     display: none;
   }
 
-  .headerContent{
+  .headerContent {
     .navegacao {
       display: flex;
     }
