@@ -15,6 +15,22 @@ export function Header() {
   const activeSection = useActiveSection();
 
   useEffect(() => {
+      function handler(e){
+        if(e.matches){
+          setOpen(false)
+        }
+      }
+
+      let windowWidth = matchMedia("(min-width: 768px)")
+      windowWidth.addEventListener("change", handler)
+
+      return () => {
+        windowWidth.removeEventListener("change", handler)
+      }
+  }, [])
+
+
+  useEffect(() => {
     if(open){
       document.body.classList.add("menu-open")
     }else{
