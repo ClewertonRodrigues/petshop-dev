@@ -2,32 +2,47 @@ import { useEffect, useState } from "react";
 
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState("");
-  const thresholdValue = window.innerWidth > 1024 ? 0.7 : 0.3;
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section[id]");
+    const footer = document.querySelector("footer");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: thresholdValue,
-      },
-    );
+    function handleScroll() {
+      const scrollPosition = window.scrollY + window.innerHeight * 0.5;
 
-    sections.forEach((section) => {
-      observer.observe(section);
+      if (footer) {
+        const footerTop = footer.offsetTop;
+
+        if (scrollPosition >= footerTop) {
+          setActiveSection("");
+          return;
+        }
+      }
+
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+
+        if (scrollPosition >= sectionTop) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    }
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
     });
 
+    window.addEventListener("resize", handleScroll);
+
     return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, []);
 
