@@ -58,6 +58,7 @@ export function Header() {
             </a>
 
             <nav className={styles.navegacao}>
+              <a className={activeSection === "hero" ? styles.activeLink : "" } href="#hero">Início</a>
               <a className={activeSection === "services" ? styles.activeLink : "" } href="#services">Serviços</a>
               <a className={activeSection === "about" ? styles.activeLink : "" } href="#about">Sobre</a>
               <a className={activeSection === "testimonials" ? styles.activeLink : "" } href="#testimonials">Depoimentos</a>
@@ -111,6 +112,15 @@ export function Header() {
 
             
           <ul>
+            <li>
+              <a 
+                href="#hero" 
+                onClick={() => setOpen(false)}
+                className={activeSection === "hero" ? styles.activeLink : "" }
+              >
+                Início
+              </a>
+            </li>
             <li>
               <a 
                 href="#services" 
