@@ -1,16 +1,52 @@
-# React + Vite
+# 🐾 Petshop Dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing Page responsiva para um pet shop fictício, desenvolvida com foco em boas práticas de desenvolvimento Front-end, animações suaves e experiência do usuário.
 
-Currently, two official plugins are available:
+O projeto foi criado para praticar conceitos de React, componentização, gerenciamento de estado, navegação entre seções e criação de interfaces modernas e responsivas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ React
+- 🎨 Sass (SCSS)
+- 🎬 Motion
+- ⚡ Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Funcionalidades
+
+✔️ Menu lateral responsivo para dispositivos móveis  
+✔️ Destaque automático da seção ativa durante a navegação da página  
+✔️ Navegação suave entre as seções  
+✔️ Botões de contato com redirecionamento direto para o WhatsApp  
+✔️ Animações leves para melhorar a experiência do usuário  
+✔️ Layout totalmente responsivo para desktop, tablet e mobile  
+
+---
+
+## 📸 Preview
+
+![Preview do Projeto](./src//assets/images/petshop-dev.png)
+
+---
+
+## 🌎 Deploy
+
+Acesse o projeto online:
+
+👉 https://clewertonrodrigues.github.io/petshop-dev
+
+---
+
+## 💡 Aprendizados
+
+- Componentização de interfaces com React
+- Organização e reutilização de componentes
+- Gerenciamento de estado com Hooks
+- Navegação entre seções da página
+- Responsividade para diferentes dispositivos
+- Criação de animações com Motion
+- Estilização utilizando Sass (SCSS)
+- Boas práticas de UX/UI
